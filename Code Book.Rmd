@@ -1,0 +1,186 @@
+---
+title: "Code Book"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Description
+
+One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+
+Here are the data for the project:
+
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+ 
+
+ The  following variables that were estimated.
+  
+   * mean(): Mean value
+   * std(): Standard deviation
+   * mad(): Median absolute deviation
+   * max(): Largest value in array
+   * min(): Smallest value in array
+   * sma(): Signal magnitude area
+    *energy(): Energy measure. Sum of the squares divided by the number of values.
+    *iqr(): Interquartile range
+    *entropy(): Signal entropy
+    *arCoeff(): Autoregression coefficients with Burg order equal to 4
+   * correlation(): Correlation coefficient between two signals
+   * maxInds(): Index of the frequency component with largest magnitude
+   * meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+    * skewness(): Skewness of the frequency domain signal
+    * kurtosis(): Kurtosis of the frequency domain signal
+    * bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+    * angle(): Angle between some vectors.
+
+
+ 
+
+
+
+ 
+
+## Tidy Data Structure
+
+ 
+
+   1.  timeBodyAccelerometer-mean()-X (radians per sec)
+   
+   2.  timeBodyAccelerometer-mean()-Y (radians per sec)
+    
+  3. timeBodyAccelerometer-mean()-Z (radians per sec)
+    
+  4. timeBodyAccelerometer-std()-X (radians per sec)
+  
+  5. timeBodyAccelerometer-std()-Y (radians per sec)
+   
+   6. timeBodyAccelerometer-std()-Z (radians per sec)
+   
+   7. timeGravityAccelerometer-mean()-X (radians per sec)
+   
+   8. timeGravityAccelerometer-mean()-Y (radians per sec)
+   
+   9. timeGravityAccelerometer-mean()-Z (radians per sec)
+    
+  10. timeGravityAccelerometer-std()-X (radians per sec)
+    
+   11.  timeGravityAccelerometer-std()-Y (radians per sec)
+   
+   12. timeGravityAccelerometer-std()-Z (radians per sec)
+   
+   13. timeBodyAccelerometerJerk-mean()-X (radians per sec)
+   
+   14. timeBodyAccelerometerJerk-mean()-Y (radians per sec)
+   
+  15. timeBodyAccelerometerJerk-mean()-Z (radians per sec)
+    
+   16. timeBodyAccelerometerJerk-std()-X (radians per sec)
+   
+   17. timeBodyAccelerometerJerk-std()-Y (radians per sec)
+   
+   18. timeBodyAccelerometerJerk-std()-Z (radians per sec)
+   19. timeBodyGyroscope-mean()-X (radians per sec)
+   
+   20. timeBodyGyroscope-mean()-Y (radians per sec)
+   
+   21. timeBodyGyroscope-mean()-Z (radians per sec)
+   
+   22. timeBodyGyroscope-std()-X (radians per sec)
+   
+   23. timeBodyGyroscope-std()-Y (radians per sec)
+   
+   24. timeBodyGyroscope-std()-Z (radians per sec)
+   
+   25. timeBodyGyroscopeJerk-mean()-X (radians per sec)
+   
+   26. timeBodyGyroscopeJerk-mean()-Y (radians per sec)
+   
+27. timeBodyGyroscopeJerk-mean()-Z (radians per sec)
+    
+28. timeBodyGyroscopeJerk-std()-X (radians per sec)
+    
+   29. timeBodyGyroscopeJerk-std()-Y (radians per sec)
+   
+   30. timeBodyGyroscopeJerk-std()-Z (radians per sec)
+    
+  31. timeBodyAccelerometerMagnitude-mean() (radians per sec)
+   
+ 32. timeBodyAccelerometerMagnitude-std() (radians per sec)
+    
+   33. timeGravityAccelerometerMagnitude-mean() (radians per sec)
+    
+34. timeGravityAccelerometerMagnitude-std() (radians per sec)
+    
+   35. timeBodyAccelerometerJerkMagnitude-mean() (radians per sec)
+   
+   36. timeBodyAccelerometerJerkMagnitude-std() (radians per sec)
+   
+   37. timeBodyGyroscopeMagnitude-mean() (radians per sec)
+   
+   38. timeBodyGyroscopeMagnitude-std() (radians per sec)
+   
+   39. timeBodyGyroscopeJerkMagnitude-mean() (radians per sec)
+   
+   40. timeBodyGyroscopeJerkMagnitude-std() (radians per sec)
+   
+   41. frequencyBodyAccelerometer-mean()-X (hertz)
+   
+42. frequencyBodyAccelerometer-mean()-Y (hertz)
+    
+43. frequencyBodyAccelerometer-mean()-Z (hertz)
+    
+44. frequencyBodyAccelerometer-std()-X (hertz)
+    
+45. frequencyBodyAccelerometer-std()-Y (hertz)
+    
+46. frequencyBodyAccelerometer-std()-Z (hertz)
+    
+47. frequencyBodyAccelerometerJerk-mean()-X (hertz)
+    
+   48. frequencyBodyAccelerometerJerk-mean()-Y (hertz)
+   
+49. frequencyBodyAccelerometerJerk-mean()-Z (hertz)
+    
+50. frequencyBodyAccelerometerJerk-std()-X (hertz)
+    
+51. frequencyBodyAccelerometerJerk-std()-Y (hertz)
+    
+52. frequencyBodyAccelerometerJerk-std()-Z (hertz)
+    
+53. frequencyBodyGyroscope-mean()-X (hertz)
+    
+54. frequencyBodyGyroscope-mean()-Y (hertz)
+    
+  55. frequencyBodyGyroscope-mean()-Z (hertz)
+    
+56. frequencyBodyGyroscope-std()-X (hertz)
+    
+57. frequencyBodyGyroscope-std()-Y (hertz)
+    
+58. frequencyBodyGyroscope-std()-Z (hertz)
+    
+59. frequencyBodyAccelerometerMagnitude-mean() (hertz)
+    
+60. frequencyBodyAccelerometerMagnitude-std() (hertz)
+    
+   61. frequencyBodyAccelerometerJerkMagnitude-mean() (hertz)
+    
+62. frequencyBodyAccelerometerJerkMagnitude-std() (hertz)
+    
+63. frequencyBodyGyroscopeMagnitude-mean() (hertz)
+    
+   64. frequencyBodyGyroscopeMagnitude-std() (hertz)
+    
+   65. frequencyBodyGyroscopeJerkMagnitude-mean() (hertz)
+    
+   66. frequencyBodyGyroscopeJerkMagnitude-std() (hertz)
+
+## Final Dataset
+
+The final dataset is generated as a `tidy data` and written to file.
